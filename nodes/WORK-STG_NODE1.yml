@@ -1,0 +1,64 @@
+steps:
+  STG_NODE1-6fc09b8b-0854-4cd2-91e3-1cfe2e182168:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: WORK
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 47e9881e-7b9b-4795-898f-a5c024ea4770
+              stepCounter: 6fc09b8b-0854-4cd2-91e3-1cfe2e182168
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ced5e7df-5d87-4194-b8e6-f8ae53b59113
+                    stepCounter: 818fdab3-049b-4e7f-aecc-b4a4d6bf1bf1
+                transform: ""
+          - columnReference:
+              columnCounter: 8254dbae-2ee6-4046-bd56-81d3ee087ce3
+              stepCounter: 6fc09b8b-0854-4cd2-91e3-1cfe2e182168
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1235eefe-2f11-4013-b253-d5b6241664e8
+                    stepCounter: 818fdab3-049b-4e7f-aecc-b4a4d6bf1bf1
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: WORK
+                nodeName: FCT_NODE
+            join:
+              joinCondition: FROM {{ ref('WORK', 'FCT_NODE') }} "FCT_NODE"
+            name: STG_NODE1
+            noLinkRefs: []
+      name: STG_NODE1
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 6fc09b8b-0854-4cd2-91e3-1cfe2e182168

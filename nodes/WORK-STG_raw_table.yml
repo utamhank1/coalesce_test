@@ -1,0 +1,106 @@
+steps:
+  STG_raw_table-04c6c981-ce0d-4a05-88a9-0744e00fc8cc:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: WORK
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 8d642e85-d2bc-4bcb-8bde-44e353239867
+              stepCounter: 04c6c981-ce0d-4a05-88a9-0744e00fc8cc
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ced5e7df-5d87-4194-b8e6-f8ae53b59113
+                    stepCounter: 818fdab3-049b-4e7f-aecc-b4a4d6bf1bf1
+                transform: ""
+          - columnReference:
+              columnCounter: 68d51635-f01e-4f95-8409-eeb7ff92f95b
+              stepCounter: 04c6c981-ce0d-4a05-88a9-0744e00fc8cc
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1235eefe-2f11-4013-b253-d5b6241664e8
+                    stepCounter: 818fdab3-049b-4e7f-aecc-b4a4d6bf1bf1
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 99235188-68c2-4a58-932f-367e7fe56947
+              stepCounter: 04c6c981-ce0d-4a05-88a9-0744e00fc8cc
+            config: {}
+            dataType: ""
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: my_custom_timestamp
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CURRENT_TIMESTAMP()
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8a8c49d5-5406-4c2c-83da-721592dad57e
+              stepCounter: 04c6c981-ce0d-4a05-88a9-0744e00fc8cc
+            config: {}
+            dataType: ""
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: my_custom_date
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CURRENT_DATE()
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: WORK
+                nodeName: raw_table
+            join:
+              joinCondition: FROM {{ ref('WORK', 'raw_table') }} "raw_table"
+            name: STG_raw_table
+            noLinkRefs: []
+      name: STG_raw_table
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 04c6c981-ce0d-4a05-88a9-0744e00fc8cc
